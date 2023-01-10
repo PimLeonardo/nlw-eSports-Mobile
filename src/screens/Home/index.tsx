@@ -24,7 +24,7 @@ export function Home() {
     }
 
     useEffect(() => {
-        fetch('http://192.168.1.12:3333/games')
+        fetch(`${process.env.CLIENT_IP}/games`)
             .then(response => response.json())
             .then(data => setGames(data))
     })
